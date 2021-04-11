@@ -1,9 +1,9 @@
 import React from "react"
 
-export default function Home() {
+export default function Galleria() {
   return (
     <div>
-      <h1>Hello!</h1>
+      <h1>Galleria</h1>
     </div>
   )
 }
