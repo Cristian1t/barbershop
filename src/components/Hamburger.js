@@ -5,10 +5,12 @@ import MobileMenu from "./MobileMenu"
 export const FullMobileMenu = styled.div`
   display: flex;
   justify-content: flex-end;
-  background: yellow;
 `
 
 export const StyledSVG = styled.svg`
+  background: ${({ theme }) => theme.color.background};
+  padding-left: 0.7rem;
+  border-radius: 5rem;
   position: absolute;
   right: 1rem;
   bottom: 1rem;
@@ -20,6 +22,7 @@ export const StyledSVG = styled.svg`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 2px 2px ${({ theme }) => theme.color.details};
 
   #top,
   #bottom {

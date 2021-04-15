@@ -6,21 +6,25 @@ export const StyledMenu = styled.div`
   position: absolute;
   bottom: 4rem;
   width: 10rem;
-  background: green;
   display: ${props => props.show};
   flex-direction: column;
   a {
     text-decoration: none;
-    background: ${({ theme }) => theme.color.details};
+    background: ${({ theme }) => theme.color.background};
     color: ${({ theme }) => theme.color.text};
-    font-size: 2rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    animation: grow 1s ease;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px ${({ theme }) => theme.color.text};
+    box-shadow: 2px 2px ${({ theme }) => theme.color.details};
   }
 `
 
 export default function MobileMenu({ display }) {
   return (
     <StyledMenu show={display}>
-      <Link to="/">Home</Link>
       <Link to="/orari">Orari</Link>
       <Link to="/prezzi">Prezzi</Link>
       <Link to="/galleria">Galleria</Link>

@@ -8,7 +8,14 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    
+    @keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
     @keyframes slideInFromLeft {
   0% {
     transform: translateX(-50%);
@@ -23,6 +30,14 @@ export const GlobalStyles = createGlobalStyle`
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 }
