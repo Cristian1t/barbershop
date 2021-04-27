@@ -5,9 +5,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
 const NavStyle = styled.nav`
-  left: 50%;
-  transform: translate(-50%, 0);
-  position: absolute;
+  /* left: 50%; */
+  /* transform: translate(-50%, 0); */
+  position: sticky;
   z-index: 1;
   top: 0.3rem;
 
@@ -25,22 +25,26 @@ const NavStyle = styled.nav`
 
 export default function Navbar() {
   return (
-    <NavStyle>
-      <StaticImage
-        className="logo"
-        src="../images/logo.svg"
-        alt="Mosta Saloon"
-        placeholder="blurred"
-        layout="constrained"
-        width={150}
-      />
-      <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/orari">Orari</Link>
-        <Link to="/prezzi">Prezzi</Link>
-        <Link to="/galleria">Galleria</Link>
-        <Link to="/contatti">Contatti</Link>
-      </div>
-    </NavStyle>
+    <>
+      <NavStyle>
+        <Link to="/">
+          <StaticImage
+            className="logo"
+            src="../images/logo.svg"
+            alt="Mosta Saloon"
+            placeholder="blurred"
+            layout="constrained"
+            width={130}
+          />
+        </Link>
+        <div className="links">
+          <Link to="/">Home</Link>
+          <Link to="/orari">Orari</Link>
+          <Link to="/prezzi">Prezzi</Link>
+          <Link to="/galleria">Galleria</Link>
+          <Link to="/contatti">Contatti</Link>
+        </div>
+      </NavStyle>
+    </>
   )
 }
