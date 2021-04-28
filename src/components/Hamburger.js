@@ -5,6 +5,8 @@ import MobileMenu from "./MobileMenu"
 export const FullMobileMenu = styled.div`
   display: flex;
   justify-content: flex-end;
+  position: sticky;
+  bottom: 1rem;
 `
 
 export const StyledSVG = styled.svg`

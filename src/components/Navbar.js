@@ -5,11 +5,20 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
 const NavStyle = styled.nav`
-  /* left: 50%; */
-  /* transform: translate(-50%, 0); */
-  position: sticky;
+  display: flex;
+  justify-content: center;
+  background: ${({ theme }) => theme.color.text};
+  position: fixed;
+  width: 100%;
+  top: 0;
   z-index: 1;
-  top: 0.3rem;
+  border-bottom-left-radius: 50% 30%;
+  border-bottom-right-radius: 50% 30%;
+  box-shadow: 0 0.2rem 0.2rem ${({ theme }) => theme.color.details};
+
+  .logo {
+    width: 5rem;
+  }
 
   @media (min-width: 768px) {
     display: grid;
@@ -30,11 +39,10 @@ export default function Navbar() {
         <Link to="/">
           <StaticImage
             className="logo"
-            src="../images/logo.svg"
+            src="../images/logo.png"
             alt="Mosta Saloon"
             placeholder="blurred"
             layout="constrained"
-            width={130}
           />
         </Link>
         <div className="links">

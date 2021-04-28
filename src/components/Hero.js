@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import Hamburger from "../components/Hamburger"
 import styled from "styled-components"
 
 export const StyledIndex = styled.div`
@@ -8,7 +7,7 @@ export const StyledIndex = styled.div`
     opacity: 40%;
   }
   .herowrap {
-    z-index: 1;
+    z-index: 2;
     background: black;
     .herotxt {
       position: absolute;
@@ -18,6 +17,8 @@ export const StyledIndex = styled.div`
       color: ${({ theme }) => theme.color.background};
       font-family: ${({ theme }) => theme.fonts.header};
       font-size: 2rem;
+      text-shadow: 1px 1px 1px red;
+      .whatsapp {
     }
   }
 `
@@ -35,10 +36,18 @@ export default function Hero() {
         <div className="herotxt">
           <h1 className="">MOSTA SALOON</h1>
           <p className="herop">389 420 7885</p>
+          <a href="http://wa.me/+393894207885">
+            <StaticImage
+              className="whatsapp"
+              src="../images/whatsapp.svg"
+              alt="Whatsappimage"
+              placeholder="blurred"
+              layout="constrained"
+              width={80}
+            />
+          </a>
         </div>
       </div>
-
-      <Hamburger />
     </StyledIndex>
   )
 }
