@@ -19,6 +19,7 @@ export const StyledIndex = styled.div`
       font-size: 2rem;
       text-shadow: 1px 1px 1px red;
       .whatsapp {
+      }
     }
   }
 `
