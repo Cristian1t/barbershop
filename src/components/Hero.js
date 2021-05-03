@@ -5,10 +5,12 @@ import styled from "styled-components"
 export const StyledIndex = styled.div`
   .heroimg {
     opacity: 40%;
+    height: 100vh;
   }
   .herowrap {
     z-index: 2;
     background: black;
+    height: 100vh;
     .herotxt {
       position: absolute;
       top: 20%;
@@ -25,7 +27,7 @@ export const StyledIndex = styled.div`
 `
 export default function Hero() {
   return (
-    <StyledIndex>
+    <StyledIndex id="hero">
       <div className="herowrap">
         <StaticImage
           className="heroimg"

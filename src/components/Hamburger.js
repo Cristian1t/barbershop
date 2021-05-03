@@ -16,15 +16,14 @@ export const StyledSVG = styled.svg`
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  /* background: green;
-  padding-left: 0.5rem; */
   margin: 0;
   height: 3rem;
   width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px ${({ theme }) => theme.color.details};
+  box-shadow: 2px 3px 5px 2px ${({ theme }) => theme.color.details};
+  cursor: pointer;
 
   #top,
   #bottom {
@@ -38,7 +37,7 @@ export const StyledSVG = styled.svg`
 
   .line {
     fill: none;
-    stroke: #bf0010;
+    stroke: ${({ theme }) => theme.color.details};
     stroke-miterlimit: 10;
     stroke-width: 3px;
   }

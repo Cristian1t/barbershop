@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 import styled from "styled-components"
 
 export const StyledMenu = styled.div`
@@ -19,16 +19,24 @@ export const StyledMenu = styled.div`
     justify-content: center;
     border-bottom: solid 1px ${({ theme }) => theme.color.text};
     box-shadow: 2px 2px ${({ theme }) => theme.color.details};
+    :active {
+      background: ${({ theme }) => theme.color.details};
+    }
   }
 `
 
 export default function MobileMenu({ display }) {
   return (
     <StyledMenu show={display}>
-      <Link to="/orari">Orari</Link>
-      <Link to="/prezzi">Prezzi</Link>
-      <Link to="/galleria">Galleria</Link>
-      <Link to="/contatti">Contatti</Link>
+      <Link to="orari" smooth={true} duration={1000} offset={-100}>
+        Orari
+      </Link>
+      <Link to="galleria" smooth={true} duration={1000} offset={-100}>
+        Galleria
+      </Link>
+      <Link to="prezzi" smooth={true} duration={1000}>
+        Prezzi
+      </Link>
     </StyledMenu>
   )
 }

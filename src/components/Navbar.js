@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 
 const NavStyle = styled.nav`
   display: flex;
@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <>
       <NavStyle>
-        <Link to="/">
+        <Link to="hero" smooth={true} duration={1000}>
           <StaticImage
             className="logo"
             src="../images/logo.png"
@@ -47,10 +47,6 @@ export default function Navbar() {
         </Link>
         <div className="links">
           <Link to="/">Home</Link>
-          <Link to="/orari">Orari</Link>
-          <Link to="/prezzi">Prezzi</Link>
-          <Link to="/galleria">Galleria</Link>
-          <Link to="/contatti">Contatti</Link>
         </div>
       </NavStyle>
     </>

@@ -14,7 +14,8 @@ const StyledTable = styled.table`
 
 function Orario() {
   return (
-    <div>
+    <div id="orari">
+      <h1 style={{ textAlign: "center" }}>Orari</h1>
       <StyledTable>
         <tr>
           <th>Giorno</th>
