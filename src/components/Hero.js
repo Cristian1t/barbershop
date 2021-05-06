@@ -13,14 +13,41 @@ export const StyledIndex = styled.div`
     height: 100vh;
     .herotxt {
       position: absolute;
-      top: 20%;
+      top: 10%;
       text-align: center;
       width: 100%;
       color: ${({ theme }) => theme.color.background};
       font-family: ${({ theme }) => theme.fonts.header};
       font-size: 2rem;
       text-shadow: 1px 1px 1px red;
+      animation: slideInFromBottom 2s ease;
+      @media (min-width: 768px) {
+        font-size: 2.5rem;
+        top: 20%;
+        width: 80%;
+      }
+      .herop2 {
+        a {
+          color: inherit;
+          text-decoration: none;
+          background: ${({ theme }) => theme.color.details};
+          width: 60%;
+          margin: 0 auto;
+          :hover {
+            background: ${({ theme }) => theme.color.text};
+            cursor: pointer;
+            font-size: 3rem;
+          }
+          @media (min-width: 768px) {
+            width: 20%;
+          }
+        }
+      }
       .whatsapp {
+        :hover {
+          cursor: pointer;
+          padding: 2rem;
+        }
       }
     }
   }
@@ -38,7 +65,12 @@ export default function Hero() {
         />
         <div className="herotxt">
           <h1 className="">MOSTA SALOON</h1>
-          <p className="herop">389 420 7885</p>
+          <p className="herop">Prenota al numero</p>
+          <p className="herop2">
+            <a href="tel:389 420 7885">389 420 7885</a>
+          </p>
+          <p className="herop">Anche su Whatsapp</p>
+
           <a href="http://wa.me/+393894207885">
             <StaticImage
               className="whatsapp"

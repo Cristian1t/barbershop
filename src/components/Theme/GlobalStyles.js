@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.copy}, sans-serif;
     margin: 0;
     padding: 0;
+    
 
     @keyframes grow {
     from {
@@ -34,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 @keyframes slideInFromBottom {
   0% {
-    transform: translateY(200%);
+    transform: translateY(100%);
   }
   100% {
     transform: translateY(0);

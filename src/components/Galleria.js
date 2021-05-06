@@ -10,6 +10,10 @@ const StyledCarousel = styled(Carousel)`
   .rec.rec-arrow:disabled {
     visibility: hidden;
   }
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px lightgrey;
+  }
 `
 const ImageWrapperCarousel = styled.div`
   display: flex;
@@ -37,28 +41,28 @@ function Galleria() {
         <ImageWrapperCarousel>
           <StaticImage
             src="../images/hair2.jpg"
-            alt="Mosta Saloon Hero"
+            alt="hair1"
             layout="constrained"
           />
         </ImageWrapperCarousel>
         <ImageWrapperCarousel>
           <StaticImage
             src="../images/hair1.jpg"
-            alt="Mosta Saloon Hero"
+            alt="hair2"
             layout="constrained"
           />
         </ImageWrapperCarousel>
         <ImageWrapperCarousel>
           <StaticImage
             src="../images/hair3.jpg"
-            alt="Mosta Saloon Hero"
+            alt="hair3"
             layout="constrained"
           />
         </ImageWrapperCarousel>
         <ImageWrapperCarousel>
           <StaticImage
             src="../images/hair4.jpg"
-            alt="Mosta Saloon Hero"
+            alt="hair4"
             layout="constrained"
           />
         </ImageWrapperCarousel>
