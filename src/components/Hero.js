@@ -21,7 +21,7 @@ export const StyledIndex = styled.div`
       font-size: 2rem;
       text-shadow: 1px 1px 1px red;
       animation: slideInFromBottom 2s ease;
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         font-size: 2.5rem;
         top: 20%;
         width: 80%;
@@ -38,7 +38,7 @@ export const StyledIndex = styled.div`
             cursor: pointer;
             font-size: 3rem;
           }
-          @media (min-width: 768px) {
+          @media (min-width: 769px) {
             width: 20%;
           }
         }

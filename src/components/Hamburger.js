@@ -53,7 +53,7 @@ export const StyledSVG = styled.svg`
     stroke-dashoffset: -41;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     display: none;
   }
 `

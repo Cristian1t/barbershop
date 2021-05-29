@@ -5,7 +5,7 @@ import styled from "styled-components"
 import Hamburger from "../Hamburger"
 
 export const LayoutStyles = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     width: 80%;
     margin: 0 auto;
   }

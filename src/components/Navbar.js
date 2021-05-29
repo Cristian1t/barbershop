@@ -16,7 +16,7 @@ const NavStyle = styled.nav`
   border-bottom-right-radius: 50% 30%;
   box-shadow: 0 0.2rem 0.2rem ${({ theme }) => theme.color.details};
 
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     justify-content: space-between;
     width: 80%;
     height: 6rem;
@@ -26,18 +26,19 @@ const NavStyle = styled.nav`
   .logo {
     cursor: pointer;
     width: 5rem;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       width: 6rem;
       margin-left: 1rem;
       margin-top: 0.2rem;
     }
     :hover {
-      box-shadow: 0 0.1rem 0.2rem ${({ theme }) => theme.color.background};
+      /* box-shadow: 0 0.1rem 0.2rem ${({ theme }) =>
+        theme.color.background}; */
     }
   }
   .links {
     display: none;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -77,8 +78,11 @@ export default function Navbar() {
           <Link to="galleria" smooth={true} duration={1000} offset={-100}>
             Galleria
           </Link>
-          <Link to="prezzi" smooth={true} duration={1000}>
+          <Link to="prezzi" smooth={true} duration={1000} offset={-100}>
             Prezzi
+          </Link>
+          <Link to="contatti" smooth={true} duration={1000} offset={-100}>
+            Contatti
           </Link>
         </div>
       </NavStyle>

@@ -1,4 +1,5 @@
 import React from "react"
+import Contatti from "../components/Contatti"
 import Galleria from "../components/Galleria"
 import Hero from "../components/Hero"
 import Orario from "../components/Orario"
@@ -17,6 +18,7 @@ export default function Home() {
         <Orario />
         <Galleria />
         <Prezzi />
+        <Contatti />
       </div>
     </>
   )

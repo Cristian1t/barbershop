@@ -7,10 +7,9 @@ const StyledPrezzi = styled.div`
   width: 100vw;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  @media (min-width: 768px) {
-    width: 80%;
+  @media (min-width: 769px) {
     align-self: center;
+    width: 80%;
   }
 `
 
@@ -22,7 +21,7 @@ function Prezzi() {
         src="../images/prezzi.jpg"
         layout="constrained"
         alt="prezzi"
-        width={400}
+        width={500}
       />
     </StyledPrezzi>
   )
